@@ -1,0 +1,14 @@
+%table
+  %thead
+    %tr
+      %th #
+      %th 時間
+      %th 更新人員
+      %th 內容
+  %tbody
+    - @logs.each do |log|
+      %tr
+        %td= log[0]
+        %td= log[2]
+        %td= log[1]
+        %td= truncate(log[4], length: 25)
